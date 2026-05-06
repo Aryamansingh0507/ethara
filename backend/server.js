@@ -21,7 +21,7 @@ app.use(cors({
     if (
       !origin ||
       origin.startsWith("http://localhost:") ||
-      origin === "https://perceptive-encouragement-production-0f8d.up.railway.app/"
+      origin.startsWith("https://perceptive-encouragement-production-")
     ) {
       callback(null, true);
     } else {
