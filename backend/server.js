@@ -17,11 +17,17 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "https://ethara-production-d0e7.up.railway.app/",
-    "https://perceptive-encouragement-production-0f8d.up.railway.app"
-  ],
+  origin: function (origin, callback) {
+    if (
+      !origin ||
+      origin.startsWith("http://localhost:") ||
+      origin === "https://ethara-production-d0e7.up.railway.app"
+    ) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true
 }));
 
