@@ -19,7 +19,7 @@ connectDB();
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://yourfrontend.up.railway.app"
+    "https://ethara-production-d0e7.up.railway.app/"
   ],
   credentials: true
 }));
