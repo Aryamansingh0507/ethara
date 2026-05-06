@@ -19,7 +19,7 @@ connectDB();
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://ethara-production-d0e7.up.railway.app/"
+    "https://perceptive-encouragement-production-0f8d.up.railway.app/"
   ],
   credentials: true
 }));
