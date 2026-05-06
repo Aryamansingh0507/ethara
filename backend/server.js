@@ -21,7 +21,7 @@ app.use(cors({
     if (
       !origin ||
       origin.startsWith("http://localhost:") ||
-      origin === "https://ethara-production-d0e7.up.railway.app"
+      origin === "https://perceptive-encouragement-production-0f8d.up.railway.app/"
     ) {
       callback(null, true);
     } else {
